@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.28" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ContactBook.Auth\ContactBook.Auth.csproj" />
+    <ProjectReference Include="..\ContactBook.Data\ContactBook.Data.csproj" />
+    <ProjectReference Include="..\ContactBook.Infrastructure\ContactBook.Infrastructure.csproj" />
+    <ProjectReference Include="..\ContactBook.Model\ContactBook.Model.csproj" />
+  </ItemGroup>
+
+</Project>
